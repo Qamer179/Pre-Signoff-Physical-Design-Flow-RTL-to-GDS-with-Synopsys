@@ -3,11 +3,32 @@
 
 
 🚀 [Demo](https://youtu.be/o_03zqJgs8g?si=-PwOWG3l46TTLG-C)
-
+**Tools Used:**
+Design Compiler (Synthesis)
+ICC2 (Physical Design)
+VCS (Simulation)
+**Design Flow:**
+RTL → Simulation → Synthesis → Floorplanning → Placement → CTS → Routing → Signoff → GDSII
+**📂 Project Structure**
+rtl/            → Verilog Design
+constraints/    → SDC Files
+scripts/        → TCL Automation Scripts
+reports/        → Timing, Area, Power Reports
+results/        → Netlist, GDS, Outputs
+docs/           → Flow Explanation
+**Key Scripts**
+🔹 Synthesis
+dc_shell -f scripts/dc/run_dc.tcl
+🔹 Physical Design
+icc2_shell -f scripts/icc2/run_icc2.tcl
+**Verification:**
+Functional Simulation using VCS
+Static Timing Analysis (STA)
+DRC / LVS Checks
 ## 1. Inputs for Synthesis
 
 ```
-RTL Design
+RTL Code (Verilog)
 ```
 
 ```
