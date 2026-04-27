@@ -2,9 +2,9 @@
 
 ```
 **Tools Used:**
+VCS (Simulation)
 Design Compiler (Synthesis)
 ICC2 (Physical Design)
-VCS (Simulation)
 ```
 **Design Flow:**
 RTL → Simulation → Synthesis → Floorplanning → Placement → CTS → Routing → Signoff → GDSII
