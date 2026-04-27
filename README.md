@@ -1,8 +1,5 @@
 # Pre-Signoff-Physical-Design-Flow-RTL-to-GDS-with-Synopsys
 
-
-
-🚀 [Demo](https://youtu.be/o_03zqJgs8g?si=-PwOWG3l46TTLG-C)
 ```
 **Tools Used:**
 Design Compiler (Synthesis)
