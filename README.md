@@ -127,7 +127,7 @@ source -echo -verbose ./rm_setup/dc_setup.tcl
 ```
 
 ```
-set RTL_SOURCE_FILES ./../rtl/full_adder.v
+set RTL_SOURCE_FILES ./../rtl/multiplexer.v
 ```
 
 ```
@@ -151,7 +151,7 @@ start_gui
 ```
 
 ```
-read_sdc ./../CONSTRAINTS/full_adder.sdc
+read_sdc ./../CONSTRAINTS/multiplexer.sdc
 ```
 
 ```
@@ -204,7 +204,7 @@ set target_library {../ref/lib/stdcell_rvt/saed32rvt_tt0p78vnhoc.db}
 ```
 
 ```
-read_verilog ../rtl/full_adder.v
+read_verilog ../rtl/multiplexer.v
 ```
 
 ```
@@ -212,7 +212,7 @@ start_gui
 ```
 
 ```
-read_sdc ../CONSTRAINTS/full_adder.sdc
+read_sdc ../CONSTRAINTS/multiplexer.sdc
 ```
 
 ```
@@ -233,11 +233,11 @@ set PDK_PATH ./../ref
 ```
 
 ```
-create_lib -ref_lib $PDK_PATH/lib/ndm/saed32rvt_c.ndm FULL_ADDER_LIB
+create_lib -ref_lib $PDK_PATH/lib/ndm/saed32rvt_c.ndm MULTIPLEXER_LIB
 ```
 
 ```
-read_verilog {./../DC/results/full_adder.mapped.v} -library FULL_ADDER_LIB -design full_adder -top full_adder
+read_verilog {./../DC/results/full_adder.mapped.v} -library MULTIPLEXER_LIB -design multiplexer -top multiplexer
 ```
 
 ```
@@ -257,11 +257,11 @@ save_block
 ```
 - if you want to exit or closed or want to reopen the tool frist type below commands 
 ```
-open_lib FULL_ADDER_LIB1
+open_lib MULTIPLEXER_LIB1
 ```
 
 ```
-open_block full_adder
+open_block multiplexer
 ```
 
 ```
@@ -408,7 +408,7 @@ report_scenario
 ```
 
 ```
-source ./../CONSTRAINTS/full_adder.sdc
+source ./../CONSTRAINTS/multiplexer.sdc
 ```
 
 ```
@@ -580,7 +580,7 @@ set link_path "./../ref/lib/stdcell_rvt/saed32rvt_ss0p7vn40c.db"
 ```
 
 ```
-read_verilog "./../ICC2/results/full_adder.routed.v"
+read_verilog "./../ICC2/results/multiplexer.routed.v"
 ```
 
 ```
@@ -588,11 +588,11 @@ link_design
 ```
 
 ```
-read_sdc ./../CONSTRAINTS/full_adder.sdc
+read_sdc ./../CONSTRAINTS/multiplexer.sdc
 ```
 
 ```
-read_parasitics "./../ICC2/results/full_adder_func::nom.spef.p1_125.spef"
+read_parasitics "./../ICC2/results/multiplexer_func::nom.spef.p1_125.spef"
 ```
 
 ```
@@ -611,7 +611,7 @@ report_design
 check_timing
 ```
 ```
-read_sdc ./../CONSTRAINTS/full_adder.sdc 
+read_sdc ./../CONSTRAINTS/multiplexer.sdc 
 ```
 ```
 update_timing -full
